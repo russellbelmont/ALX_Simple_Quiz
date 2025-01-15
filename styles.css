@@ -1,33 +1,48 @@
-// Function to check the answer when the user submits
-function checkAnswer() {
-    // Step 1: Declare the correct answer
-    const correctAnswer = "4";
-
-    // Step 2: Get the selected answer from the radio buttons
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
-
-    // Step 3: Check if the user has selected an answer
-    if (userAnswer) {
-        // Step 4: Compare the user's answer with the correct answer
-        if (userAnswer.value === correctAnswer) {
-            // Step 5: Provide feedback if the answer is correct
-            document.getElementById("feedback").textContent = "Correct! Well done.";
-        } else {
-            // Step 6: Provide feedback if the answer is incorrect
-            document.getElementById("feedback").textContent = "That's incorrect. Try again!";
-        }
-    } else {
-        // Step 7: Handle case where no option is selected
-        document.getElementById("feedback").textContent = "Please select an answer.";
-    }
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-// Step 8: Add event listener to the "Submit Answer" button
-const submitButton = document.getElementById("submit-answer");
+#quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-// Check if the submit button exists and add the event listener
-if (submitButton) {
-    submitButton.addEventListener("click", checkAnswer);
-} else {
-    console.error("Submit Answer button not found.");
+#quiz-question {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#submit-answer {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-answer:hover {
+    background-color: #0056b3;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 18px;
 }
