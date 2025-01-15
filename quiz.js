@@ -17,10 +17,11 @@ function checkAnswer() {
             document.getElementById("feedback").textContent = "That's incorrect. Try again!";
         }
     } else {
-        // Handle case where no option is selected
+        // Step 7: Handle case where no option is selected
         document.getElementById("feedback").textContent = "Please select an answer.";
     }
 }
 
-// Step 7: Add event listener to the "Submit Answer" button
+// Step 8: Add event listener to the "Submit Answer" button
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
+
