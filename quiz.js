@@ -23,11 +23,4 @@ function checkAnswer() {
 }
 
 // Step 8: Add event listener to the "Submit Answer" button
-const submitButton = document.getElementById("submit-answer");
-
-// Check if the submit button exists and add the event listener
-if (submitButton) {
-    submitButton.addEventListener("click", checkAnswer);
-} else {
-    console.error("Submit Answer button not found.");
-}
+document.getElementById("submit-answer").addEventListener("click", checkAnswer);
